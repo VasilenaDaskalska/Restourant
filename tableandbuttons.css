@@ -1,0 +1,104 @@
+      /* Стили за таблицата */
+        .table_container
+        {
+           max-height: 520px; 
+           overflow-y: auto; 
+           margin-top: 10px;
+        }
+
+        table {
+            font-family: Arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr {
+            background-color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+             /* Стили за формата */
+        .form-container {
+            display: none; /* Скрито по подразбиране */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.25);
+            width: 40%;
+        }
+
+        .form-container h2 {
+            margin-top: 0;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        /* Допълнителни стилове за селекта */
+        select {
+            appearance: none; /* За да премахнете стандартния стил на браузъра */
+            background: white url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="gray" d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center; /* Стил на стрелката */
+            background-size: 12px; /* Размер на стрелката */
+            padding-right: 30px; /* Празно пространство за стрелката */
+        }
+
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+        }
+
+        .button_edit {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 15px;
+        background-color: #7fd4a5; /* Светлозелен цвят */
+        border: none;
+        border-radius: 8px; /* Заоблени ъгли */
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Лека сянка */
+        transition: transform 0.2s, box-shadow 0.2s; /* Анимация при задържане */
+        }
+
+    .button_edit:hover {
+      background-color: #6bbd92; /* По-тъмен нюанс при задържане */
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+      transform: translateY(-2px);
+    }
+
+    .button_edit:active {
+      background-color: #5aa57e;
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+      transform: translateY(0);
+    }
